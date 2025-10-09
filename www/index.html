@@ -176,7 +176,7 @@
             ctx.drawImage(img,0,0,300,300);
         };
         var audio = new Audio();
-        audio.src = "pin.wav";　
+        audio.src = "pin.wav";
         audio.play();
 
         
@@ -210,12 +210,18 @@
     
  
     // 繰り返し実行する処理
-    function timer(){  
+    function timer(){
+        if (active) {
+              etime = parseInt( (new Date() - startTime)/1000 );
+              rest = period - etime;
+              $("#time").html("経過時間： " + etime);
+              $("#remain").html("残り時間： " + rest);             
+              analog(rest);
         
         
     } 
-
-  </script>
+}
+</script>
 </head>
 <body>
     <canvas id="mycanvas" width="200" height="200">Test</canvas>
