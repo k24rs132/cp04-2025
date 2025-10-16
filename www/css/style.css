@@ -2,6 +2,10 @@
     body{
         background-color: skyblue;
     }
+
+     button{
+        color:blue;
+    }
     #minuteStr {
         color: #ff0000;
         font-size: 20px;
@@ -43,6 +47,7 @@
         left:10px; right:10px;
     }
     
+   
     #btnA {
         font-size: 20px;
         position:absolute; top:380px; left:2%; width:43%; height:60px; 
