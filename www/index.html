@@ -187,7 +187,7 @@
     function btnAClick(e){
         active = true;
         startTime = new Date(); 
-        $("#text").html("Go!!!!!");
+        $("#state").html("Go!!!!!");
         
         
     }
@@ -195,7 +195,7 @@
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active = false;
-        $("#text").html("Stop！");
+        $("#state").html("Stop！");
         
         
     }
@@ -207,7 +207,7 @@
         period = 60* parseInt( $("#minute").val() ) + parseInt( $("#second").val() );
         $("#time").html("経過時間： 0");
         $("#remain").html("残り時間： " + period);
-        $("#text").html("Ready...");
+        $("#state").html("Ready...");
         
     }
     
@@ -223,7 +223,7 @@
               if(rest<=0){
         active = false;
         alarm();
-        $("#text").html("Finish");
+        $("#state").html("Finish");
 
     }
         
@@ -240,7 +240,7 @@
 
     <div id="remain">Remaining time</div>
     <div id="time">Time</div>
-    <div id="text">Text</div>
+    <div id="state">State</div>
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button>  
